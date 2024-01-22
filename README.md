@@ -29,6 +29,9 @@ Contributions to the Smart JSON extension are welcome. Please feel free to fork 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
+## Privacy Policy
+Read our [Privacy Policy](privacy-policy.html) for detailed information on how Smart JSON respects and protects user privacy.
+
 ## Author
 - Mrutyunjay Patil
 
