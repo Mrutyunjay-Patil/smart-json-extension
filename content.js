@@ -17,6 +17,8 @@ let originalJsonObject = null;
             body.innerHTML = '<pre id="json-container">' + formattedJSON + '</pre>';
             // Add custom styles to the page
             addStyles();
+            // Add the author's label
+            addAuthorLabel();
             // Add control buttons like 'Expand All', 'Collapse All', etc.
             addControlButtons();
             // Attach event listeners to copy buttons
@@ -310,6 +312,14 @@ function attachCopyEventListeners() {
     });
 }
 
+// Function to add the author's label to the page
+function addAuthorLabel() {
+    const authorLabel = document.createElement('div');
+    authorLabel.id = 'author-label';
+    authorLabel.textContent = 'Smart JSON Author: Mrutyunjay Patil';
+    document.body.insertBefore(authorLabel, document.body.firstChild);
+}
+
 function addStyles() {
     const style = document.createElement('style');
     style.textContent += `
@@ -329,7 +339,7 @@ function addStyles() {
             background: #fff;
             border: 0px;
             border-radius: 4px;
-            // box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
         }
         #control-panel {
             position: fixed;
@@ -416,6 +426,21 @@ function addStyles() {
         }
         .collapsible-content {
             margin-left: 20px;
+        }
+        #author-label {
+            position: fixed;
+            top: 15px;
+            left: 10px;
+            z-index: 1000;
+            font-size: 0.9em;
+            background-color: #fff;
+            cursor: default;
+            padding: 5px;
+            // border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
         }
     `;
     document.head.appendChild(style);
